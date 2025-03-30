@@ -1,5 +1,5 @@
 def get_intersection(set1, set2):
-    set1.add(60) 
+    set1.(60) 
     return set1.intersection(set2)
 
 if __name__ == "__main__":
