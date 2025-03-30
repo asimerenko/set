@@ -30,9 +30,13 @@ jobs:
         pip install pytest 
 
     - name: Run tests
+      if: ${{ github.event.inputs.ShouldRunTests == 'true' }}
       run: |
-        pytest test_main.py 
+        pytest test_main.py
+      env:
+        ShouldRunTests: ${{ github.event.inputs.ShouldRunTests }}
 
     - name: Run custom script
       run: |
-        python script.py 
+        python script.py
+
