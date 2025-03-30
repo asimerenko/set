@@ -5,10 +5,12 @@ on:
     branches: [ main ]
     paths:
       - '**.py'  
+      - '.github/workflows/python-app.yml'
   pull_request:
     branches: [ main ]
     paths:
       - '**.py'
+      - '.github/workflows/python-app.yml'
 
 jobs:
   build:
